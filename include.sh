@@ -1,6 +1,6 @@
 __CURRENT_FILE=${(%):-%N}
 __CURRENT_DIR=$(realpath $(dirname $__CURRENT_FILE))
 
-link-directory-recursive "$__CURRENT_DIR/home" "$HOME"
+link-directory-recursive-cached "$__CURRENT_DIR/home" "$HOME"
 
-trace-add "Public dotfiles included"
+trace-add "$(format-cmd 'dotfiles-public') Public dotfiles included"
